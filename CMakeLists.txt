@@ -23,8 +23,8 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(  Directory  launch meshes urdf map 
-          Destintion share/${PROJECT_NAME}
+install(    DIRECTORY     config launch map meshes params rviz src urdf
+            DESTINATION   share/${PROJECT_NAME}
 )
 
 ament_package()

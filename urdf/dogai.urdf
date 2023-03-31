@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="dogai">
-  <link
-    name="body">
+
+<robot   xmlns:xacro="http://www.ros.org/wiki/xacro"  name="dogai">
+  
+  <link    name="body">
     <inertial>
       <origin
         xyz="-0.12 3.27356016098628E-18 0.000453027438163315"
@@ -44,8 +41,8 @@
       </geometry>
     </collision>
   </link>
-  <link
-    name="shoulder_fr">
+
+  <link    name="shoulder_fr">
     <inertial>
       <origin
         xyz="0.011598 -0.0091343 3.4694E-18"
@@ -84,8 +81,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="shoulder_fr_j"
+
+  <joint    name="shoulder_fr_j"
     type="revolute">
     <origin
       xyz="-0.0275 -0.039 0.00800000000000003"
@@ -102,8 +99,8 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="leg_fr">
+
+  <link    name="leg_fr">
     <inertial>
       <origin
         xyz="0.048778 -0.0060469 -4.649E-11"
@@ -142,8 +139,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leg_fr_j"
+
+  <joint    name="leg_fr_j"
     type="revolute">
     <origin
       xyz="0.0115 -0.0584999999999999 0"
@@ -160,8 +157,8 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="foreleg_fr">
+
+  <link    name="foreleg_fr">
     <inertial>
       <origin
         xyz="0.052106825436364 0.00242636941342475 -1.4779647575236E-08"
@@ -200,8 +197,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="foreleg_fr_j"
+  <joint    name="foreleg_fr_j"
     type="revolute">
     <origin
       xyz="0.105076162853427 0 0"
@@ -218,8 +214,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="shoulder_fl">
+  <link    name="shoulder_fl">
     <inertial>
       <origin
         xyz="0.0115975106554325 0.00913432556897403 0"
@@ -258,8 +253,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="shoulder_fl_j"
+
+  <joint    name="shoulder_fl_j"
     type="revolute">
     <origin
       xyz="-0.0275 0.039 0.00800000000000001"
@@ -276,8 +271,8 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="leg_fl">
+
+  <link    name="leg_fl">
     <inertial>
       <origin
         xyz="0.0487781480399099 -0.00604686128392777 -4.64900618002417E-11"
@@ -316,8 +311,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leg_fl_j"
+
+  <joint    name="leg_fl_j"
     type="revolute">
     <origin
       xyz="0.0115 0.0585000000000001 0"
@@ -334,8 +329,8 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="foreleg_fl">
+
+  <link    name="foreleg_fl">
     <inertial>
       <origin
         xyz="0.052106825436364 0.00242636941342481 -1.47796476029916E-08"
@@ -374,8 +369,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="foreleg_fl_j"
+
+  <joint    name="foreleg_fl_j"
     type="revolute">
     <origin
       xyz="0.105076162853427 0 0"
@@ -392,8 +387,8 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="shoulder_br">
+  
+  <link    name="shoulder_br">
     <inertial>
       <origin
         xyz="0.0115975106554326 -0.00913432556897405 0"
@@ -432,8 +427,8 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="shoulder_br_j"
+
+  <joint    name="shoulder_br_j"
     type="revolute">
     <origin
       xyz="-0.2115 -0.039 0.00799999999999997"
@@ -450,8 +445,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="leg_br">
+  <link    name="leg_br">
     <inertial>
       <origin
         xyz="0.0487781480399099 -0.00604686128392776 -4.64900618002417E-11"
@@ -490,8 +484,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leg_br_j"
+  <joint    name="leg_br_j"
     type="revolute">
     <origin
       xyz="0.0115 -0.0585 0"
@@ -508,8 +501,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="foreleg_br">
+  <link    name="foreleg_br">
     <inertial>
       <origin
         xyz="0.052106825436364 0.00242636941342478 -1.47796475613582E-08"
@@ -548,8 +540,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="foreleg_br_j"
+  <joint    name="foreleg_br_j"
     type="revolute">
     <origin
       xyz="0.105076162853427 0 0"
@@ -566,8 +557,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="shoulder_bl">
+  <link    name="shoulder_bl">
     <inertial>
       <origin
         xyz="0.0115975106554325 0.00913432556897404 -2.77555756156289E-17"
@@ -606,8 +596,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="shoulder_bl_j"
+  <joint    name="shoulder_bl_j"
     type="revolute">
     <origin
       xyz="-0.2115 0.039 0.00800000000000001"
@@ -624,8 +613,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="leg_bl">
+  <link    name="leg_bl">
     <inertial>
       <origin
         xyz="-0.0291684099673972 -0.0491417860643844 -0.000978325095612437"
@@ -664,8 +652,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="leg_bl_j"
+  <joint    name="leg_bl_j"
     type="revolute">
     <origin
       xyz="0.0115 0.0293315900790929 0"
@@ -682,8 +669,7 @@
       effort="1"
       velocity="4" />
   </joint>
-  <link
-    name="foreleg_bl">
+  <link    name="foreleg_bl">
     <inertial>
       <origin
         xyz="0.0521068254363641 0.00242636941342483 -1.47796476029916E-08"
@@ -722,8 +708,7 @@
       </geometry>
     </collision>
   </link>
-  <joint
-    name="foreleg_bl_j"
+  <joint    name="foreleg_bl_j"
     type="revolute">
     <origin
       xyz="-0.0291684099209072 -0.104 -0.015"

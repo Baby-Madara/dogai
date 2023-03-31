@@ -3,7 +3,7 @@
 <package format="3">
   <name>dogai</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>this is dogai trial</description>
   <maintainer email="ahmedfarahat1177@gmail.com">pita009</maintainer>
   <license>TODO: License declaration</license>
 
@@ -14,8 +14,9 @@
 
   <exec_depend>rviz</exec_depend>
   <exec_depend>xacro</exec_depend>
-  <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <!-- <exec_depend>joint_state_publisher_gui</exec_depend> -->
 
   <export>
     <build_type>ament_cmake</build_type>
