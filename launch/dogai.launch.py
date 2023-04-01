@@ -25,27 +25,27 @@ def generate_launch_description():
 
     # Configure the robot_state_publisher node
     node_robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        parameters=[{'robot_description': robot_description_raw, 'use_sim_time': False}] # add other parameters here if required
+        package    = 'robot_state_publisher',
+        executable = 'robot_state_publisher',
+        output     = 'screen',
+        parameters = [{'robot_description': robot_description_raw, 'use_sim_time': False}] # add other parameters here if required
     )
 
     # Start rviz2
     node_rviz2 = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        output='screen',
-        arguments=['-d', '~/ros2_ws/src/dogai/rviz/rviz_settings.rviz']
+        package    = 'rviz2',
+        executable = 'rviz2',
+        name       = 'rviz2',
+        output     = 'screen',
+        arguments  = ['-d', '~/ros2_ws/src/dogai/rviz/rviz_settings.rviz']
     )
 
     # Start joint_state_publisher
     node_joint_state_publisher = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
-        name='joint_state_publisher_gui',
-        output='screen'
+        package    = 'joint_state_publisher_gui',
+        executable = 'joint_state_publisher_gui',
+        name       = 'joint_state_publisher_gui',
+        output     = 'screen'
     )
 
     ld.add_action(node_rviz2)
