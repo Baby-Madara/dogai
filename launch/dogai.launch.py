@@ -37,8 +37,9 @@ def generate_launch_description():
         executable = 'rviz2',
         name       = 'rviz2',
         output     = 'screen',
-        arguments  = ['-d', '~/ros2_ws/src/dogai/rviz/rviz_settings.rviz']
+        arguments  = ['-d', os.path.join(get_package_share_directory('dogai'), 'rviz', 'rviz_settings.rviz')]
     )
+
 
     # Start joint_state_publisher
     node_joint_state_publisher = Node(

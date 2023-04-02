@@ -23,7 +23,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(    DIRECTORY     config launch map meshes params rviz src urdf
+install(    DIRECTORY     config launch map meshes params rviz src urdf world 
             DESTINATION   share/${PROJECT_NAME}
 )
 
