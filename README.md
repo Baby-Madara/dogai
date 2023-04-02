@@ -1,5 +1,5 @@
 
-# This is a ros2 package 'dogai'
+# This is a ROS2 package 'dogai'
 
 ### a custom package made for 'Robotics' course project at MSA University - Egypt
 
