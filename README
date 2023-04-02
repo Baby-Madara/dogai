@@ -1,0 +1,15 @@
+# This is a ros2 package 'dogai'
+### a custom package made for Robotics course project
+ros2 version: ros humble
+
+## group members
+
+| Name           | gitHub username | email address                                          | phone number  |
+|----------------|-----------------|--------------------------------------------------------|---------------|
+|Ahmed Farahat   | @Baby-Madara    |||
+|Marawan Mahmoud |--------         |||
+|Mohamed Waleed  |-------- |       ||
+|Shehab Ashraf   |-------- |       ||
+|Yasmin Ibrahim  |-------- |       ||
+|Yousef Gamal    |-------- |       ||
+
