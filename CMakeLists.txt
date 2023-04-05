@@ -24,7 +24,13 @@ if(BUILD_TESTING)
 endif()
 
 install(    DIRECTORY     config launch map meshes params rviz src urdf world 
+            
+            # PATTERN "setup_assistant.launch" EXCLUDE
+
             DESTINATION   share/${PROJECT_NAME}
 )
+
+# install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
+
 
 ament_package()
