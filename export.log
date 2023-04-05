@@ -1,0 +1,114 @@
+2023-03-27 23:32:03,724 INFO  AssemblyExportForm.cs: 309 - Saving URDF package to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai
+2023-03-27 23:32:03,728 INFO  ExportHelper.cs: 147 - Beginning the export process
+2023-03-27 23:32:03,729 INFO  ExportHelper.cs: 153 - Creating package directories with name dogai and save path C:\Users\Ahmed-Farahat-Laptop\Desktop
+2023-03-27 23:32:04,360 INFO  ExportHelper.cs: 162 - Creating CMakeLists.txt at C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\CMakeLists.txt
+2023-03-27 23:32:04,361 INFO  ExportHelper.cs: 166 - Creating joint names config at C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\config\joint_names_dogai.yaml
+2023-03-27 23:32:04,361 INFO  ExportHelper.cs: 170 - Creating package.xml at C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\package.xml
+2023-03-27 23:32:04,362 INFO  PackageXMLWriter.cs: 21 - Creating package.xml at C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\package.xml
+2023-03-27 23:32:04,363 INFO  ExportHelper.cs: 177 - Creating RVIZ launch file in C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\launch\
+2023-03-27 23:32:04,363 INFO  ExportHelper.cs: 182 - Creating Gazebo launch file in C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\launch\
+2023-03-27 23:32:04,364 INFO  ExportHelper.cs: 187 - Saving existing STL preferences
+2023-03-27 23:32:04,364 INFO  ExportHelper.cs: 450 - Saving users preferences
+2023-03-27 23:32:04,367 INFO  ExportHelper.cs: 190 - Modifying STL preferences
+2023-03-27 23:32:04,367 INFO  ExportHelper.cs: 464 - Setting STL preferences
+2023-03-27 23:32:04,368 INFO  ExportHelper.cs: 196 - Found 0 hidden components 
+2023-03-27 23:32:04,368 INFO  ExportHelper.cs: 197 - Hiding all components
+2023-03-27 23:32:04,607 INFO  ExportHelper.cs: 204 - Beginning individual files export
+2023-03-27 23:32:04,609 INFO  ExportHelper.cs: 270 - Exporting link: body
+2023-03-27 23:32:04,610 INFO  ExportHelper.cs: 272 - Link body has 4 children
+2023-03-27 23:32:04,610 INFO  ExportHelper.cs: 270 - Exporting link: shoulder_fr
+2023-03-27 23:32:04,611 INFO  ExportHelper.cs: 272 - Link shoulder_fr has 1 children
+2023-03-27 23:32:04,612 INFO  ExportHelper.cs: 270 - Exporting link: leg_fr
+2023-03-27 23:32:04,612 INFO  ExportHelper.cs: 272 - Link leg_fr has 1 children
+2023-03-27 23:32:04,613 INFO  ExportHelper.cs: 270 - Exporting link: foreleg_fr
+2023-03-27 23:32:04,613 INFO  ExportHelper.cs: 272 - Link foreleg_fr has 0 children
+2023-03-27 23:32:04,613 INFO  ExportHelper.cs: 317 - foreleg_fr: Exporting STL with coordinate frame Origin_foreleg_fr_j
+2023-03-27 23:32:04,614 INFO  ExportHelper.cs: 322 - foreleg_fr: Reference geometry name 
+2023-03-27 23:32:04,778 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\foreleg_fr.STL
+2023-03-27 23:32:04,851 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:04,852 INFO  ExportHelper.cs: 317 - leg_fr: Exporting STL with coordinate frame Origin_leg_fr_j
+2023-03-27 23:32:04,852 INFO  ExportHelper.cs: 322 - leg_fr: Reference geometry name 
+2023-03-27 23:32:05,029 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\leg_fr.STL
+2023-03-27 23:32:05,103 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,103 INFO  ExportHelper.cs: 317 - shoulder_fr: Exporting STL with coordinate frame Origin_shoulder_fr_j
+2023-03-27 23:32:05,104 INFO  ExportHelper.cs: 322 - shoulder_fr: Reference geometry name 
+2023-03-27 23:32:05,219 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\shoulder_fr.STL
+2023-03-27 23:32:05,282 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,284 INFO  ExportHelper.cs: 270 - Exporting link: shoulder_fl
+2023-03-27 23:32:05,284 INFO  ExportHelper.cs: 272 - Link shoulder_fl has 1 children
+2023-03-27 23:32:05,285 INFO  ExportHelper.cs: 270 - Exporting link: leg_fl
+2023-03-27 23:32:05,285 INFO  ExportHelper.cs: 272 - Link leg_fl has 1 children
+2023-03-27 23:32:05,286 INFO  ExportHelper.cs: 270 - Exporting link: foreleg_fl
+2023-03-27 23:32:05,286 INFO  ExportHelper.cs: 272 - Link foreleg_fl has 0 children
+2023-03-27 23:32:05,287 INFO  ExportHelper.cs: 317 - foreleg_fl: Exporting STL with coordinate frame Origin_foreleg_fl_j
+2023-03-27 23:32:05,287 INFO  ExportHelper.cs: 322 - foreleg_fl: Reference geometry name 
+2023-03-27 23:32:05,340 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\foreleg_fl.STL
+2023-03-27 23:32:05,404 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,405 INFO  ExportHelper.cs: 317 - leg_fl: Exporting STL with coordinate frame Origin_leg_fl_j
+2023-03-27 23:32:05,405 INFO  ExportHelper.cs: 322 - leg_fl: Reference geometry name 
+2023-03-27 23:32:05,460 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\leg_fl.STL
+2023-03-27 23:32:05,554 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,555 INFO  ExportHelper.cs: 317 - shoulder_fl: Exporting STL with coordinate frame Origin_shoulder_fl_j
+2023-03-27 23:32:05,555 INFO  ExportHelper.cs: 322 - shoulder_fl: Reference geometry name 
+2023-03-27 23:32:05,607 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\shoulder_fl.STL
+2023-03-27 23:32:05,677 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,678 INFO  ExportHelper.cs: 270 - Exporting link: shoulder_br
+2023-03-27 23:32:05,678 INFO  ExportHelper.cs: 272 - Link shoulder_br has 1 children
+2023-03-27 23:32:05,679 INFO  ExportHelper.cs: 270 - Exporting link: leg_br
+2023-03-27 23:32:05,680 INFO  ExportHelper.cs: 272 - Link leg_br has 1 children
+2023-03-27 23:32:05,680 INFO  ExportHelper.cs: 270 - Exporting link: foreleg_br
+2023-03-27 23:32:05,681 INFO  ExportHelper.cs: 272 - Link foreleg_br has 0 children
+2023-03-27 23:32:05,681 INFO  ExportHelper.cs: 317 - foreleg_br: Exporting STL with coordinate frame Origin_foreleg_br_j
+2023-03-27 23:32:05,681 INFO  ExportHelper.cs: 322 - foreleg_br: Reference geometry name 
+2023-03-27 23:32:05,784 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\foreleg_br.STL
+2023-03-27 23:32:05,899 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:05,900 INFO  ExportHelper.cs: 317 - leg_br: Exporting STL with coordinate frame Origin_leg_br_j
+2023-03-27 23:32:05,900 INFO  ExportHelper.cs: 322 - leg_br: Reference geometry name 
+2023-03-27 23:32:05,958 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\leg_br.STL
+2023-03-27 23:32:06,056 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,057 INFO  ExportHelper.cs: 317 - shoulder_br: Exporting STL with coordinate frame Origin_shoulder_br_j
+2023-03-27 23:32:06,057 INFO  ExportHelper.cs: 322 - shoulder_br: Reference geometry name 
+2023-03-27 23:32:06,109 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\shoulder_br.STL
+2023-03-27 23:32:06,177 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,179 INFO  ExportHelper.cs: 270 - Exporting link: shoulder_bl
+2023-03-27 23:32:06,179 INFO  ExportHelper.cs: 272 - Link shoulder_bl has 1 children
+2023-03-27 23:32:06,180 INFO  ExportHelper.cs: 270 - Exporting link: leg_bl
+2023-03-27 23:32:06,180 INFO  ExportHelper.cs: 272 - Link leg_bl has 1 children
+2023-03-27 23:32:06,181 INFO  ExportHelper.cs: 270 - Exporting link: foreleg_bl
+2023-03-27 23:32:06,181 INFO  ExportHelper.cs: 272 - Link foreleg_bl has 0 children
+2023-03-27 23:32:06,181 INFO  ExportHelper.cs: 317 - foreleg_bl: Exporting STL with coordinate frame Origin_foreleg_bl_j
+2023-03-27 23:32:06,182 INFO  ExportHelper.cs: 322 - foreleg_bl: Reference geometry name 
+2023-03-27 23:32:06,234 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\foreleg_bl.STL
+2023-03-27 23:32:06,297 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,298 INFO  ExportHelper.cs: 317 - leg_bl: Exporting STL with coordinate frame Origin_leg_bl_j
+2023-03-27 23:32:06,298 INFO  ExportHelper.cs: 322 - leg_bl: Reference geometry name 
+2023-03-27 23:32:06,356 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\leg_bl.STL
+2023-03-27 23:32:06,449 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,450 INFO  ExportHelper.cs: 317 - shoulder_bl: Exporting STL with coordinate frame Origin_shoulder_bl_j
+2023-03-27 23:32:06,450 INFO  ExportHelper.cs: 322 - shoulder_bl: Reference geometry name 
+2023-03-27 23:32:06,505 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\shoulder_bl.STL
+2023-03-27 23:32:06,571 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,572 INFO  ExportHelper.cs: 317 - body: Exporting STL with coordinate frame Origin_global
+2023-03-27 23:32:06,572 INFO  ExportHelper.cs: 322 - body: Reference geometry name 
+2023-03-27 23:32:06,768 INFO  ExportHelper.cs: 330 - Saving STL to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\meshes\body.STL
+2023-03-27 23:32:06,870 INFO  ExportHelper.cs: 405 - Removing SW header in STL file
+2023-03-27 23:32:06,870 INFO  ExportHelper.cs: 145 - Showing all components except previously hidden components
+2023-03-27 23:32:07,438 INFO  ExportHelper.cs: 145 - Resetting STL preferences
+2023-03-27 23:32:07,438 INFO  ExportHelper.cs: 478 - Returning STL preferences to user preferences
+2023-03-27 23:32:07,439 INFO  ExportHelper.cs: 228 - Writing URDF file to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\urdf\dogai.urdf
+2023-03-27 23:32:07,440 INFO  CSVImportExport.cs: 32 - Writing CSV file C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\urdf\dogai.csv
+2023-03-27 23:32:07,441 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,442 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,442 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,443 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,446 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,446 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,447 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,447 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,447 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,448 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,448 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,449 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,449 ERROR CSVImportExport.cs: 130 - The following columns were not written to the CSV: Link.Joint.ChildLink.link,
+2023-03-27 23:32:07,450 INFO  ExportHelper.cs: 234 - Copying log file
+2023-03-27 23:32:07,450 INFO  ExportHelper.cs: 439 - Copying C:\Users\Ahmed-Farahat-Laptop\sw2urdf_logs\sw2urdf.log to C:\Users\Ahmed-Farahat-Laptop\Desktop\dogai\export.log
