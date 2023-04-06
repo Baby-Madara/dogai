@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find dogai)/urdf.rviz" />
+    args="-d $(find dogai)/rviz/urdf.rviz" />
 </launch>
