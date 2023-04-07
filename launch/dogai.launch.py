@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-
 import os
-from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch import LaunchDescription
+from ament_index_python.packages import get_package_share_directory
 import xacro
 
-from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
@@ -56,34 +55,6 @@ def generate_launch_description():
     return ld
 
 
-
-
-# # Run the node
-# return LaunchDescription([
-#     node_robot_state_publisher,
-#     node_joint_state_publisher,
-#     node_rviz2,
-# ])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# print(generate_launch_description())
-
 """
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -97,36 +68,5 @@ def generate_launch_decription():
 		)
 	])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-##########################################
-'''
-#!/usr/bin/python3
-
-from launch import LaunchDescription
-from launch_ros.actions import Node
-
-
-def generate_launch_decription():
-	return LaunchDescription([
-		Node(
-			package='',
-			executable='',
-
-		)
-	])
-
-'''
 
 """
