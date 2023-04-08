@@ -4,11 +4,6 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="dogai">
-
-  
-  <link name="world"/>
-
-
   <link
     name="body">
     <inertial>
@@ -49,15 +44,6 @@
       </geometry>
     </collision>
   </link>
-
-  <joint name="dummy_joint" type="fixed">
-    <origin xyz="0 0 0.25" rpy="0 0 0"/>
-    <parent link="world"/>
-    <child link="body"/>
-  </joint>
-
-
-
   <link
     name="shoulder_fr">
     <inertial>
