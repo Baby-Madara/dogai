@@ -65,7 +65,7 @@ def main(source_frame, target_frame):
         try:
 
             # listener.waitForTransform(tarFr, srcFr, rospy.Time(), rospy.Duration(1))
-            (trans, rot) = listener.lookupTransform(f"/{tarFr}", f"/{srcFr}", rospy.Time(0))
+            (trans, rot) = listener.lookupTransform(f"/{srcFr}", f"/{tarFr}", rospy.Time(0))
             # Combine rotation matrix and translation vector 
             transform_matrix = quaternion_matrix(rot)
             transform_matrix[0][3] = trans[0]
