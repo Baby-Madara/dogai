@@ -1,0 +1,19 @@
+digraph G {
+"world" -> "body"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"leg_bl" -> "foreleg_bl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"shoulder_bl" -> "leg_bl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"leg_br" -> "foreleg_br"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"shoulder_br" -> "leg_br"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"leg_fl" -> "foreleg_fl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"shoulder_fl" -> "leg_fl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"leg_fr" -> "foreleg_fr"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"shoulder_fr" -> "leg_fr"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"body" -> "shoulder_bl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"body" -> "shoulder_br"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"body" -> "shoulder_fl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+"body" -> "shoulder_fr"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1681004769.322\nOldest transform: 1681004764.421\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1681004769.3578608"[ shape=plaintext ] ;
+}->"world";
+}
