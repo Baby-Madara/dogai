@@ -1,20 +1,33 @@
 <launch>
-  <arg
-    name="model" />
+
   <param
-    name="robot_description"
-    textfile="$(find dogai)/urdf/dogai.urdf" />
+    name     = "robot_description"
+    textfile = "$(find dogai)/urdf/dogai.urdf" />
+  <!-- <arg    name="src_tf"/>
+  <arg    name="dest_tf"/> -->
+  <arg    name="model" />
+
   <node
-    name="joint_state_publisher_gui"
-    pkg="joint_state_publisher_gui"
-    type="joint_state_publisher_gui" />
+    name = "joint_state_publisher_gui"
+    pkg  = "joint_state_publisher_gui"
+    type = "joint_state_publisher_gui" />
+
   <node
-    name="robot_state_publisher"
-    pkg="robot_state_publisher"
-    type="robot_state_publisher" />
+    name = "robot_state_publisher"
+    pkg  = "robot_state_publisher"
+    type = "robot_state_publisher" />
+
   <node
-    name="rviz"
-    pkg="rviz"
-    type="rviz"
-    args="-d $(find dogai)/rviz/urdf.rviz" />
+    name = "rviz"
+    pkg  = "rviz"
+    type = "rviz"
+    args = "-d $(find dogai)/rviz/urdf.rviz" />
+
+  <!-- <node
+    name = "fk_shower"
+    pkg  = "dogai"
+    type = "dogai/fk_shower"
+    args = "$(arg src_tf) $(arg dest_tf)" /> -->
+
+
 </launch>
