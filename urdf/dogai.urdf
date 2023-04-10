@@ -1,757 +1,508 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="dogai">
-
-  
-  <link name="world"/>
-
-
-  <link
-    name="body">
-    <inertial>
-      <origin
-        xyz="-0.12 3.2055E-18 0.00045303"
-        rpy="0 0 0" />
-      <mass
-        value="0.81191" />
-      <inertia
-        ixx="0.0012796"
-        ixy="-1.8752E-19"
-        ixz="1.8007E-19"
-        iyy="0.0024911"
-        iyz="-6.7374E-20"
-        izz="0.0031155" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/body.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.61176 0.21961 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/body.STL" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="dummy_joint" type="fixed">
-    <origin xyz="0 0 0.25" rpy="0 0 0"/>
-    <parent link="world"/>
-    <child link="body"/>
-  </joint>
-
-
-
-  <link
-    name="shoulder_fr">
-    <inertial>
-      <origin
-        xyz="0.0115975106554325 -0.00913432556897403 3.46944695195361E-18"
-        rpy="0 0 0" />
-      <mass
-        value="0.106289004701676" />
-      <inertia
-        ixx="3.25774990855459E-05"
-        ixy="-9.46709865303844E-08"
-        ixz="2.54666498027331E-22"
-        iyy="4.53186517428609E-05"
-        iyz="2.46297179272485E-21"
-        izz="4.32581209996743E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_fr.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0 0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_fr.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="shoulder_fr_j"
-    type="revolute">
-    <origin
-      xyz="-0.0275 -0.039 0.008"
-      rpy="0 1.5708 0" />
-    <parent
-      link="body" />
-    <child
-      link="shoulder_fr" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-0.75"
-      upper="1"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="leg_fr">
-    <inertial>
-      <origin
-        xyz="0.0487781480399099 -0.00604686128392776 -4.64900756780295E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.193999611092193" />
-      <inertia
-        ixx="8.48586935457572E-05"
-        ixy="2.19246058611957E-05"
-        ixz="-5.96478438885935E-12"
-        iyy="0.000321240412259336"
-        iyz="-2.85920133701601E-11"
-        izz="0.000299935255132482" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_fr.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.576470588235294 0.152941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_fr.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="leg_fr_j"
-    type="revolute">
-    <origin
-      xyz="0.0115 -0.0585 0"
-      rpy="1.5708 0 0" />
-    <parent
-      link="shoulder_fr" />
-    <child
-      link="leg_fr" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.5"
-      upper="1.57"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="foreleg_fr">
-    <inertial>
-      <origin
-        xyz="0.052106825436364 0.00242636941342475 -1.4779647575236E-08"
-        rpy="0 0 0" />
-      <mass
-        value="0.0838297623786511" />
-      <inertia
-        ixx="1.2288603982173E-05"
-        ixy="-2.54469730030703E-06"
-        ixz="1.34161791073589E-11"
-        iyy="0.000188049108154985"
-        iyz="-9.88336405367172E-12"
-        izz="0.000186982160883614" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_fr.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0.0901960784313725 0.164705882352941 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_fr.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="foreleg_fr_j"
-    type="revolute">
-    <origin
-      xyz="0.10508 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="leg_fr" />
-    <child
-      link="foreleg_fr" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2"
-      upper="0.5"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="shoulder_fl">
-    <inertial>
-      <origin
-        xyz="0.0115975106554325 0.00913432556897403 0"
-        rpy="0 0 0" />
-      <mass
-        value="0.106289004701676" />
-      <inertia
-        ixx="3.25774990855459E-05"
-        ixy="9.46709865303842E-08"
-        ixz="6.96249139264393E-22"
-        iyy="4.5318651742861E-05"
-        iyz="1.70887851159399E-21"
-        izz="4.32581209996743E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_fl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0 0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_fl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="shoulder_fl_j"
-    type="revolute">
-    <origin
-      xyz="-0.0275 0.039 0.008"
-      rpy="0 1.5708 0" />
-    <parent
-      link="body" />
-    <child
-      link="shoulder_fl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-0.75"
-      upper="1"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="leg_fl">
-    <inertial>
-      <origin
-        xyz="0.0487781480399099 -0.00604686128392776 -4.64900756780295E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.193999611092193" />
-      <inertia
-        ixx="8.48586935457572E-05"
-        ixy="2.19246058611957E-05"
-        ixz="-5.96478440380382E-12"
-        iyy="0.000321240412259336"
-        iyz="-2.8592013365393E-11"
-        izz="0.000299935255132482" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_fl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.576470588235294 0.152941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_fl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="leg_fl_j"
-    type="revolute">
-    <origin
-      xyz="0.0115 0.0585 0"
-      rpy="1.5708 0 0" />
-    <parent
-      link="shoulder_fl" />
-    <child
-      link="leg_fl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.5"
-      upper="1.57"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="foreleg_fl">
-    <inertial>
-      <origin
-        xyz="0.052106825436364 0.00242636941342481 -1.47796475891138E-08"
-        rpy="0 0 0" />
-      <mass
-        value="0.0838297623786512" />
-      <inertia
-        ixx="1.2288603982173E-05"
-        ixy="-2.54469730030704E-06"
-        ixz="1.34161791055163E-11"
-        iyy="0.000188049108154985"
-        iyz="-9.88336405478012E-12"
-        izz="0.000186982160883614" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_fl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0.0901960784313725 0.164705882352941 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_fl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="foreleg_fl_j"
-    type="revolute">
-    <origin
-      xyz="0.10508 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="leg_fl" />
-    <child
-      link="foreleg_fl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2"
-      upper="0.5"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="shoulder_br">
-    <inertial>
-      <origin
-        xyz="0.0115975106554326 -0.00913432556897405 0"
-        rpy="0 0 0" />
-      <mass
-        value="0.106289004701676" />
-      <inertia
-        ixx="3.25774990855459E-05"
-        ixy="-9.46709865303851E-08"
-        ixz="1.02508255400528E-21"
-        iyy="4.5318651742861E-05"
-        iyz="8.17447970596714E-22"
-        izz="4.32581209996744E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_br.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0 0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_br.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="shoulder_br_j"
-    type="revolute">
-    <origin
-      xyz="-0.2115 -0.039 0.008"
-      rpy="0 1.5708 0" />
-    <parent
-      link="body" />
-    <child
-      link="shoulder_br" />
-    <axis
-      xyz="0 0 1" />
-    <limit
-      lower="-0.75"
-      upper="1"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="leg_br">
-    <inertial>
-      <origin
-        xyz="0.0487781480399099 -0.00604686128392776 -4.64900618002417E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.193999611092193" />
-      <inertia
-        ixx="8.48586935457571E-05"
-        ixy="2.19246058611956E-05"
-        ixz="-5.96478434356076E-12"
-        iyy="0.000321240412259335"
-        iyz="-2.85920133693728E-11"
-        izz="0.000299935255132482" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_br.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.576470588235294 0.152941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_br.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="leg_br_j"
-    type="revolute">
-    <origin
-      xyz="0.0115 -0.0585 0"
-      rpy="1.5708 0 0" />
-    <parent
-      link="shoulder_br" />
-    <child
-      link="leg_br" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.5"
-      upper="1.57"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="foreleg_br">
-    <inertial>
-      <origin
-        xyz="0.052106825436364 0.00242636941342478 -1.47796475613582E-08"
-        rpy="0 0 0" />
-      <mass
-        value="0.0838297623786512" />
-      <inertia
-        ixx="1.2288603982173E-05"
-        ixy="-2.54469730030703E-06"
-        ixz="1.34161790950947E-11"
-        iyy="0.000188049108154985"
-        iyz="-9.88336405359797E-12"
-        izz="0.000186982160883614" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_br.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0.0901960784313725 0.164705882352941 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_br.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="foreleg_br_j"
-    type="revolute">
-    <origin
-      xyz="0.10508 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="leg_br" />
-    <child
-      link="foreleg_br" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2"
-      upper="0.5"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="shoulder_bl">
-    <inertial>
-      <origin
-        xyz="0.0115975106554325 0.00913432556897404 -2.77555756156289E-17"
-        rpy="0 0 0" />
-      <mass
-        value="0.106289004701676" />
-      <inertia
-        ixx="3.25774990855458E-05"
-        ixy="9.4670986530381E-08"
-        ixz="1.24892754754621E-21"
-        iyy="4.53186517428609E-05"
-        iyz="-3.24133778204539E-22"
-        izz="4.32581209996743E-05" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_bl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0 0 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/shoulder_bl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="shoulder_bl_j"
-    type="revolute">
-    <origin
-      xyz="-0.2115 0.039 0.008"
-      rpy="0 1.5708 0" />
-    <parent
-      link="body" />
-    <child
-      link="shoulder_bl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-0.75"
-      upper="1"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="leg_bl">
-    <inertial>
-      <origin
-        xyz="0.0487781480399099 -0.00604686128392773 -4.64900618002417E-11"
-        rpy="0 0 0" />
-      <mass
-        value="0.193999611092193" />
-      <inertia
-        ixx="8.48586935457571E-05"
-        ixy="2.19246058611956E-05"
-        ixz="-5.96478435596948E-12"
-        iyy="0.000321240412259335"
-        iyz="-2.85920133800422E-11"
-        izz="0.000299935255132482" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_bl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="1 0.576470588235294 0.152941176470588 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/leg_bl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="leg_bl_j"
-    type="revolute">
-    <origin
-      xyz="0.0115 0.0585000000000001 0"
-      rpy="1.5707963267949 0 0" />
-    <parent
-      link="shoulder_bl" />
-    <child
-      link="leg_bl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-1.5"
-      upper="1.57"
-      effort="1"
-      velocity="4" />
-  </joint>
-  <link
-    name="foreleg_bl">
-    <inertial>
-      <origin
-        xyz="0.0521068254363641 0.00242636941342483 -1.47796476029916E-08"
-        rpy="0 0 0" />
-      <mass
-        value="0.0838297623786512" />
-      <inertia
-        ixx="1.2288603982173E-05"
-        ixy="-2.54469730030704E-06"
-        ixz="1.34161790993919E-11"
-        iyy="0.000188049108154985"
-        iyz="-9.88336405395384E-12"
-        izz="0.000186982160883614" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_bl.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0 0.0901960784313725 0.164705882352941 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://dogai/meshes/foreleg_bl.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="foreleg_bl_j"
-    type="revolute">
-    <origin
-      xyz="0.105076162853427 0 0"
-      rpy="0 0 0" />
-    <parent
-      link="leg_bl" />
-    <child
-      link="foreleg_bl" />
-    <axis
-      xyz="0 0 -1" />
-    <limit
-      lower="-2"
-      upper="0.5"
-      effort="1"
-      velocity="4" />
-  </joint>
+<robot name="dogai">
+    <link name="world" />
+    <link name="body">
+        <inertial>
+            <origin xyz="-0.12 3.2055E-18 0.00045303" rpy="0 0 0" />
+            <mass value="0.81191" />
+            <inertia ixx="0.0012796" ixy="-1.8752E-19" ixz="1.8007E-19" iyy="0.0024911" iyz="-6.7374E-20" izz="0.0031155" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/body.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.61176 0.21961 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/body.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dummy_joint" type="fixed">
+        <origin xyz="0 0 0.25" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="body" />
+    </joint>
+    <link name="shoulder_fr">
+        <inertial>
+            <origin xyz="0.0115975106554325 -0.00913432556897403 3.46944695195361E-18" rpy="0 0 0" />
+            <mass value="0.106289004701676" />
+            <inertia ixx="3.25774990855459E-05" ixy="-9.46709865303844E-08" ixz="2.54666498027331E-22" iyy="4.53186517428609E-05" iyz="2.46297179272485E-21" izz="4.32581209996743E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_fr.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_fr.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_fr_j" type="revolute">
+        <origin xyz="-0.0275 -0.039 0.008" rpy="0 1.5708 0" />
+        <parent link="body" />
+        <child link="shoulder_fr" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.75" upper="1" effort="1" velocity="4" />
+    </joint>
+    <link name="leg_fr">
+        <inertial>
+            <origin xyz="0.0487781480399099 -0.00604686128392776 -4.64900756780295E-11" rpy="0 0 0" />
+            <mass value="0.193999611092193" />
+            <inertia ixx="8.48586935457572E-05" ixy="2.19246058611957E-05" ixz="-5.96478438885935E-12" iyy="0.000321240412259336" iyz="-2.85920133701601E-11" izz="0.000299935255132482" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_fr.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.576470588235294 0.152941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_fr.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_fr_j" type="revolute">
+        <origin xyz="0.0115 -0.0585 0" rpy="1.5708 0 0" />
+        <parent link="shoulder_fr" />
+        <child link="leg_fr" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.5" upper="1.57" effort="1" velocity="4" />
+    </joint>
+    <link name="foreleg_fr">
+        <inertial>
+            <origin xyz="0.052106825436364 0.00242636941342475 -1.4779647575236E-08" rpy="0 0 0" />
+            <mass value="0.0838297623786511" />
+            <inertia ixx="1.2288603982173E-05" ixy="-2.54469730030703E-06" ixz="1.34161791073589E-11" iyy="0.000188049108154985" iyz="-9.88336405367172E-12" izz="0.000186982160883614" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_fr.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0.0901960784313725 0.164705882352941 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_fr.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="foreleg_fr_j" type="revolute">
+        <origin xyz="0.10508 0 0" rpy="0 0 0" />
+        <parent link="leg_fr" />
+        <child link="foreleg_fr" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2" upper="0.5" effort="1" velocity="4" />
+    </joint>
+    <link name="shoulder_fl">
+        <inertial>
+            <origin xyz="0.0115975106554325 0.00913432556897403 0" rpy="0 0 0" />
+            <mass value="0.106289004701676" />
+            <inertia ixx="3.25774990855459E-05" ixy="9.46709865303842E-08" ixz="6.96249139264393E-22" iyy="4.5318651742861E-05" iyz="1.70887851159399E-21" izz="4.32581209996743E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_fl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_fl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_fl_j" type="revolute">
+        <origin xyz="-0.0275 0.039 0.008" rpy="0 1.5708 0" />
+        <parent link="body" />
+        <child link="shoulder_fl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-0.75" upper="1" effort="1" velocity="4" />
+    </joint>
+    <link name="leg_fl">
+        <inertial>
+            <origin xyz="0.0487781480399099 -0.00604686128392776 -4.64900756780295E-11" rpy="0 0 0" />
+            <mass value="0.193999611092193" />
+            <inertia ixx="8.48586935457572E-05" ixy="2.19246058611957E-05" ixz="-5.96478440380382E-12" iyy="0.000321240412259336" iyz="-2.8592013365393E-11" izz="0.000299935255132482" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_fl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.576470588235294 0.152941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_fl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_fl_j" type="revolute">
+        <origin xyz="0.0115 0.0585 0" rpy="1.5708 0 0" />
+        <parent link="shoulder_fl" />
+        <child link="leg_fl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.5" upper="1.57" effort="1" velocity="4" />
+    </joint>
+    <link name="foreleg_fl">
+        <inertial>
+            <origin xyz="0.052106825436364 0.00242636941342481 -1.47796475891138E-08" rpy="0 0 0" />
+            <mass value="0.0838297623786512" />
+            <inertia ixx="1.2288603982173E-05" ixy="-2.54469730030704E-06" ixz="1.34161791055163E-11" iyy="0.000188049108154985" iyz="-9.88336405478012E-12" izz="0.000186982160883614" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_fl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0.0901960784313725 0.164705882352941 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_fl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="foreleg_fl_j" type="revolute">
+        <origin xyz="0.10508 0 0" rpy="0 0 0" />
+        <parent link="leg_fl" />
+        <child link="foreleg_fl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2" upper="0.5" effort="1" velocity="4" />
+    </joint>
+    <link name="shoulder_br">
+        <inertial>
+            <origin xyz="0.0115975106554326 -0.00913432556897405 0" rpy="0 0 0" />
+            <mass value="0.106289004701676" />
+            <inertia ixx="3.25774990855459E-05" ixy="-9.46709865303851E-08" ixz="1.02508255400528E-21" iyy="4.5318651742861E-05" iyz="8.17447970596714E-22" izz="4.32581209996744E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_br.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_br.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_br_j" type="revolute">
+        <origin xyz="-0.2115 -0.039 0.008" rpy="0 1.5708 0" />
+        <parent link="body" />
+        <child link="shoulder_br" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.75" upper="1" effort="1" velocity="4" />
+    </joint>
+    <link name="leg_br">
+        <inertial>
+            <origin xyz="0.0487781480399099 -0.00604686128392776 -4.64900618002417E-11" rpy="0 0 0" />
+            <mass value="0.193999611092193" />
+            <inertia ixx="8.48586935457571E-05" ixy="2.19246058611956E-05" ixz="-5.96478434356076E-12" iyy="0.000321240412259335" iyz="-2.85920133693728E-11" izz="0.000299935255132482" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_br.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.576470588235294 0.152941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_br.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_br_j" type="revolute">
+        <origin xyz="0.0115 -0.0585 0" rpy="1.5708 0 0" />
+        <parent link="shoulder_br" />
+        <child link="leg_br" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.5" upper="1.57" effort="1" velocity="4" />
+    </joint>
+    <link name="foreleg_br">
+        <inertial>
+            <origin xyz="0.052106825436364 0.00242636941342478 -1.47796475613582E-08" rpy="0 0 0" />
+            <mass value="0.0838297623786512" />
+            <inertia ixx="1.2288603982173E-05" ixy="-2.54469730030703E-06" ixz="1.34161790950947E-11" iyy="0.000188049108154985" iyz="-9.88336405359797E-12" izz="0.000186982160883614" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_br.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0.0901960784313725 0.164705882352941 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_br.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="foreleg_br_j" type="revolute">
+        <origin xyz="0.10508 0 0" rpy="0 0 0" />
+        <parent link="leg_br" />
+        <child link="foreleg_br" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2" upper="0.5" effort="1" velocity="4" />
+    </joint>
+    <link name="shoulder_bl">
+        <inertial>
+            <origin xyz="0.0115975106554325 0.00913432556897404 -2.77555756156289E-17" rpy="0 0 0" />
+            <mass value="0.106289004701676" />
+            <inertia ixx="3.25774990855458E-05" ixy="9.4670986530381E-08" ixz="1.24892754754621E-21" iyy="4.53186517428609E-05" iyz="-3.24133778204539E-22" izz="4.32581209996743E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_bl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/shoulder_bl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_bl_j" type="revolute">
+        <origin xyz="-0.2115 0.039 0.008" rpy="0 1.5708 0" />
+        <parent link="body" />
+        <child link="shoulder_bl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-0.75" upper="1" effort="1" velocity="4" />
+    </joint>
+    <link name="leg_bl">
+        <inertial>
+            <origin xyz="0.0487781480399099 -0.00604686128392773 -4.64900618002417E-11" rpy="0 0 0" />
+            <mass value="0.193999611092193" />
+            <inertia ixx="8.48586935457571E-05" ixy="2.19246058611956E-05" ixz="-5.96478435596948E-12" iyy="0.000321240412259335" iyz="-2.85920133800422E-11" izz="0.000299935255132482" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_bl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.576470588235294 0.152941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/leg_bl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg_bl_j" type="revolute">
+        <origin xyz="0.0115 0.0585000000000001 0" rpy="1.5707963267949 0 0" />
+        <parent link="shoulder_bl" />
+        <child link="leg_bl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.5" upper="1.57" effort="1" velocity="4" />
+    </joint>
+    <link name="foreleg_bl">
+        <inertial>
+            <origin xyz="0.0521068254363641 0.00242636941342483 -1.47796476029916E-08" rpy="0 0 0" />
+            <mass value="0.0838297623786512" />
+            <inertia ixx="1.2288603982173E-05" ixy="-2.54469730030704E-06" ixz="1.34161790993919E-11" iyy="0.000188049108154985" iyz="-9.88336405395384E-12" izz="0.000186982160883614" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_bl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0.0901960784313725 0.164705882352941 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://dogai/meshes/foreleg_bl.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="foreleg_bl_j" type="revolute">
+        <origin xyz="0.105076162853427 0 0" rpy="0 0 0" />
+        <parent link="leg_bl" />
+        <child link="foreleg_bl" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2" upper="0.5" effort="1" velocity="4" />
+    </joint>
+    <transmission name="trans_shoulder_fr_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder_fr_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="shoulder_fr_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_fr_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_fr_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_fr_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_foreleg_fr_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="foreleg_fr_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="foreleg_fr_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_shoulder_fl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder_fl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="shoulder_fl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_fl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_fl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_fl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_foreleg_fl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="foreleg_fl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="foreleg_fl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_shoulder_br_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder_br_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="shoulder_br_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_br_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_br_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_br_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_foreleg_br_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="foreleg_br_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="foreleg_br_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_shoulder_bl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder_bl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="shoulder_bl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg_bl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg_bl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg_bl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_foreleg_bl_j">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="foreleg_bl_j">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="foreleg_bl_j_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
 </robot>
+
