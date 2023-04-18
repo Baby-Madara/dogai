@@ -8,7 +8,7 @@ catkin_package()
 
 find_package(roslaunch)
 
-foreach(dir config launch meshes rviz textures urdf)
+foreach(dir config launch meshes rviz scripts textures urdf)
 	install(DIRECTORY ${dir}/
 		DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
