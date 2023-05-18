@@ -1,3 +1,6 @@
+<!-- no needt to be used at all, instead, use: -->
+<!-- rosrun rosserial_python serial_node.py _baud:=115200 _port:="/dev/ttyUSB1"    //or whatever the port name -->
+
 <launch>
     <arg name="port" default="/dev/ttyUSB0" />
     <arg name="baudrate" default="57600" />
