@@ -1,46 +1,78 @@
 
 
-
 #include <ros.h>
 #include <std_msgs/Float32MultiArray.h>
 #include <sensor_msgs/JointState.h>
-
 #include <Servo.h>
 #include <LiquidCrystal_I2C.h>
+#define PI 3.1415926535897932384626433832795
+
+#define MAP(_val, _oldL, _oldH, _newL, _newH)	( ((double)_newH - _newL)*((double)_val - _oldL)/( (double)_oldH - _oldL) + _newL )
 
 
+// float servosVals_LowOld[  12] = {0};
+// float servosVals_HighOld[ 12] = {0};
+// float servosVals_LowNew[  12] = {0};
+// float servosVals_HighNew[ 12] = {0};
+
+float servosVals[12] = {0};
 LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address 0x27, 16 column and 2 rows
-
 ros::NodeHandle nh;
 
+float global_cur_pos[12] = {0};
+int servosPins[12] = {44, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
 
-void callback(const std_msgs::Float32MultiArray& msg) {
-  // access the received data using msg.data
-  for (int i = 0; i < msg.data_length; i++) {
-    lcd.print(msg.data[i]);
-    lcd.print(", ");
+Servo servos[12];
+int servoPins[12] = {13, 12, 11,     10,  9,   8,      7,  6,  5,       4,  3,   2};
+int offset[12]    = {90, 90, 45,     90, 90, 135,     90, 90, 45,      90, 45, 135};
+int dir[12]       = {-1, -1, -1,      1,  1,   1,      1,  1,  1,      -1,  1,   1};
+
+
+void jointStateCallback(const std_msgs::Float32MultiArray& msg)
+{
+  const int num_joints = 12;
+  for (int i = 0; i < num_joints; i++)
+  {
+    servos[i].write((int)((msg.data[i]*(180.0/3.14)*dir[i])  + offset[i]));
   }
-  
 }
 
-ros::Subscriber<std_msgs::Float32MultiArray> sub("test_a_topic", &callback);
+ros::Subscriber<std_msgs::Float32MultiArray> sub("test_a_topic", &jointStateCallback);
 
-void setup() {
+void setup()
+{
+  servos[0] .write(90);
+  servos[1] .write(90);
+  servos[2] .write(45);
 
-  lcd.init();
-  lcd.backlight();
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Ard. ");
+  servos[3] .write(90);
+  servos[4] .write(90);
+  servos[5] .write(135);
 
+  servos[6] .write(90);
+  servos[7] .write(90);
+  servos[8] .write(45);
+
+  servos[9] .write(90);
+  servos[10].write(45);
+  servos[11].write(135);
+    
   nh.getHardware()->setBaud(115200);
   nh.initNode();
   nh.subscribe(sub);
+
+  for (int i = 0; i < 12; i++)
+  {
+    servos[i].attach(servoPins[i]); // Attach servos to pins 2 to 13
+    
+  }
 }
 
-void loop() {
+void loop()
+{
   nh.spinOnce();
 }
+
 
 
 
