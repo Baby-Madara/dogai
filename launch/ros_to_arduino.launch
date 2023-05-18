@@ -1,0 +1,12 @@
+<launch>
+    <arg name="port" default="/dev/ttyUSB0" />
+    <arg name="baudrate" default="57600" />
+
+    <node name="serial_node" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" value="$(arg port)" />
+        <param name="baud" value="$(arg baudrate)" />
+    </node>
+</launch>
+
+<!-- to use it in terminal -->
+<!-- roslaunch <package_name> serial.launch -->
